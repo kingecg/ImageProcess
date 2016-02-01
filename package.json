@@ -9,7 +9,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "colors": "^1.1.2",
     "commander": "^2.9.0",
-    "colors":"^1.1.2"
+    "mocha": "^2.4.5",
+    "should": "^8.2.1"
   }
 }
