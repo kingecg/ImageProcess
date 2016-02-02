@@ -1,5 +1,5 @@
 var should = require("should");
-var logfac=require("../log.js");
+var logfac=require("../lib/log");
 describe("Logging",function(){
     var logger;
     before(function(){

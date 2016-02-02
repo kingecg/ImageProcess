@@ -4,7 +4,8 @@
  * and open the template in the editor.
  */
 //every processor should have a method called process
-var logFact = require("./log.js");
+var logFact = require("./lib/log.js");
+var q = require("q");
 var ImageProcessor=function(){
     this.processorName="Sample";//the implemented processor must set this property self
    

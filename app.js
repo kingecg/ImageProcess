@@ -5,7 +5,7 @@
 * 3) insert photo information into mango db
 */
 var IMG_EXTENSION=[];//photo extension
-var logger = require("./log.js")("Main");
+var logger = require("./lib/log.js")("Main");
 var app = {};
 app.srcDirectory=".";
 app.opt = require("commander");
