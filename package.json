@@ -4,7 +4,7 @@
   "description": "Process photo in one folder",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha --reporter nyan"
   },
   "author": "",
   "license": "ISC",
