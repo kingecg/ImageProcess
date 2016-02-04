@@ -11,19 +11,24 @@ var ImageProcessor=function(){
    
 };
 ImageProcessor.prototype.inited=false;
+ImageProcessor.prototype.logger = null;
 ImageProcessor.prototype.init = function(){
     //init logger
+    console.log("init");
     this.logger=logFact(this.processorName);
+    this.inited = true;
 };
 
-ImageProcessor.prototype.process=function(filename){
+ImageProcessor.prototype.process=function(info,env){
+    var def=q.defer();
     if(!this.inited){
         this.init();
     }
-    this.logger.info("Begin to process ",filename);
+    this.logger.info("Processor %s begin to process file %s",this.processorName,info.file);
     if(this._process_ && typeof this._process_ === "function"){
-        this._process_ (filename);
+        this._process_ (info,env,def);
     }
-    this.logger.info("End to process ",filename);
+    this.logger.info("Processor %s end to process %s",this.processorName,info.file);
+    return def.promise;
 };
 exports=module.exports=ImageProcessor;
